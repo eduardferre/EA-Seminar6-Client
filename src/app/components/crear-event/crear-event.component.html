@@ -1,0 +1,49 @@
+<div class="container mt-5">
+    <div class="class row">
+        <div class="col-lg-6 offset-lg-3">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="title"> {{ title | uppercase }} </span>
+                    <form class="mt-3" [formGroup]="eventForm" (ngSubmit)="addEvent()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="id" 
+                                class="form-control form-control-lg" placeholder="ID">
+                            <div class="text-danger"
+                                *ngIf="eventForm.get('id')?.hasError('required') && eventForm.get('id')?.touched">
+                                <span>El id de l'event és obligatori</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="name" 
+                                class="form-control form-control-lg" placeholder="Name">
+                            <div class="text-danger"
+                                *ngIf="eventForm.get('name')?.hasError('required') && eventForm.get('name')?.touched">
+                                <span>El nom de l'event és obligatori</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="place"
+                                class="form-control form-control-lg" placeholder="Place">
+                            <div class="text-danger"
+                                *ngIf="eventForm.get('place')?.hasError('required') && eventForm.get('place')?.touched">
+                                <span>E lloc de l'event és obligatori</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="eventDate"
+                                class="form-control form-control-lg" placeholder="Event Date">
+                            <div class="text-danger"
+                                *ngIf="eventForm.get('eventDate')?.hasError('required') && eventForm.get('eventDate')?.touched">
+                                <span>La data de l'event és obligatori</span>
+                             </div>
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink="/" class="btn btn-secondary btn-lg float-start">TORNAR</button>
+                            <button type="submit" [disabled]="eventForm.invalid" class="btn btn-success btn-lg float-end">ACCEPTAR</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

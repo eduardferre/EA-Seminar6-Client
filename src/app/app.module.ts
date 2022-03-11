@@ -10,12 +10,18 @@ import { HttpClientModule } from '@angular/common/http'
 import { AppComponent } from './app.component';
 import { CrearUserComponent } from './components/crear-user/crear-user.component';
 import { ListarUsersComponent } from './components/listar-users/listar-users.component';
+import { ListarEventsComponent } from './components/listar-events/listar-events.component';
+import { CrearEventComponent } from './components/crear-event/crear-event.component';
+import { ListarTodoComponent } from './components/listar-todo/listar-todo.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CrearUserComponent,
-    ListarUsersComponent
+    ListarUsersComponent,
+    ListarEventsComponent,
+    CrearEventComponent,
+    ListarTodoComponent
   ],
   imports: [
     BrowserModule,
