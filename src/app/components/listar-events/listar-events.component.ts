@@ -25,6 +25,8 @@ export class ListarEventsComponent implements OnInit {
     }, error => {
       console.log(error);
     })
+    // console.log();
+    
   }
 
   deleteEvent(name: string) {

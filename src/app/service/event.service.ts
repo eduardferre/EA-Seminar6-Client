@@ -11,8 +11,8 @@ export class EventService {
 
   constructor(private http: HttpClient) { }
 
-  getEvents(): Observable<any> {
-    return this.http.get(this.url + '/events');
+  getEvents(): Observable<Event[]> {
+    return this.http.get<Event[]>(this.url + '/events');
   }
 
   deleteEvent(name: string): Observable<any> {

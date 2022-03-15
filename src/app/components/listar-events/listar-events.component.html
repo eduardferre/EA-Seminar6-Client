@@ -18,7 +18,7 @@
                      <tbody>
                        <tr *ngFor="let event of listEvents">
                          <td>{{ event.id }}</td>
-                         <td>{{ event.name }}</td>
+                         <td>{{ event.name | slice:0:10}}</td>
                          <td>{{ event.place }}</td>
                          <td>{{ event.eventDate }}</td>
                          <td>
