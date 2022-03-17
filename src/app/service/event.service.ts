@@ -15,19 +15,19 @@ export class EventService {
     return this.http.get<Event[]>(this.url + '/events');
   }
 
-  deleteEvent(name: string): Observable<any> {
+  deleteEvent(name: string): Observable<string> {
     return this.http.delete(this.url + '/events/' + name, {responseType: 'text'})
   }
 
-  addEvent(event: Event): Observable<any> {
+  addEvent(event: Event): Observable<string> {
     return this.http.post(this.url + '/events', event, {responseType: 'text'}) ;
   }
 
-  getEvent(name: string): Observable<any> {
-    return this.http.get(this.url + '/events/' + name);
+  getEvent(name: string): Observable<Event> {
+    return this.http.get<Event>(this.url + '/events/' + name);
   }
 
-  editEvent(name: string, event: Event): Observable<any> {
+  editEvent(name: string, event: Event): Observable<string> {
     return this.http.put(this.url + '/events/' + name, event, {responseType: 'text'});
   }
 }

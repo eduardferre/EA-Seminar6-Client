@@ -29,7 +29,9 @@ export class CrearEventComponent implements OnInit {
       place: ['', Validators.required],
       eventDate: ['', Validators.required],
     });
+    
     this.name = this.aRouter.snapshot.paramMap.get('name');
+    console.log(this.name);
   }
 
   ngOnInit(): void {
