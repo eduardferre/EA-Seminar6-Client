@@ -29,7 +29,9 @@ export class CrearUserComponent implements OnInit {
       age: ['', Validators.required],
       password: ['', Validators.required],
     });
+    
     this.name = this.aRouter.snapshot.paramMap.get('name');
+    console.log(this.name);
   }
 
   ngOnInit(): void {
