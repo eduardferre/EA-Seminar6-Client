@@ -15,7 +15,6 @@ export class ListarUsersComponent implements OnInit {
         private toastr: ToastrService) { }
   
   ngOnInit(): void {
-    this.getUsers();
   }
 
   getUsers() {

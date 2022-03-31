@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CrearEventComponent } from './components/crear-event/crear-event.component';
 
 // Components
 import { CrearUserComponent } from './components/crear-user/crear-user.component';
 import { ListarTodoComponent } from './components/listar-todo/listar-todo.component';
+import { CrearEventComponent } from './components/crear-event/crear-event.component';
 
 // Routes
 const routes: Routes = [
